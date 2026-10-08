@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="LessonBridge AI MVP demo workspace." />
-  <title>LessonBridge AI — MVP Workspace</title>
+  <meta name="description" content="AdaptEd AI MVP demo workspace." />
+  <title>AdaptEd AI — MVP Workspace</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
 @media(max-width:560px){.container{width:min(100% - 28px,1160px)}.nav-wrap{height:68px}.brand{font-size:18px}.btn-small{padding:9px 12px}.hero h1{font-size:43px;letter-spacing:-2.2px}.hero-lead{font-size:16px}.hero-actions{flex-direction:column}.hero-actions .btn{width:100%}.hero-proof{flex-direction:column;gap:6px}.preview-body{grid-template-columns:1fr}.preview-form{border-right:0;border-bottom:1px solid var(--line)}.trust-inner{gap:10px;font-size:12px;padding:18px 0}.trust-inner span{width:100%;text-align:center}.section{padding:62px 0}.narrow-center h2,.split-heading h2,.feature-copy h2,.deaf-copy h2,.demo-copy h2,.pricing-heading h2{font-size:34px;letter-spacing:-1.4px}.sample-row{grid-template-columns:1fr;gap:7px}.cta-inner h2{font-size:34px}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:5px}.quick-grid{grid-template-columns:1fr}.form-grid.two,.check-grid{grid-template-columns:1fr}.learner-grid{grid-template-columns:1fr}.page-heading h1{font-size:29px}.result-top{flex-direction:column}.vocab-list{grid-template-columns:1fr}}
 
 /* =========================================================
-   LessonBridge AI — Colour refresh v2
+   AdaptEd AI — Colour refresh v2
    Azure-inspired, education-friendly and accessibility-minded
    ========================================================= */
 :root{
@@ -166,7 +166,7 @@ input,select,textarea{background:#fbfdff;border-color:#cfdaea}input:focus,select
     <aside class="sidebar" id="sidebar">
       <a class="brand app-brand" href="index.html">
         <span class="brand-mark"><span></span><span></span></span>
-        <span>LessonBridge <b>AI</b></span>
+        <span>AdaptEd <b>AI</b></span>
       </a>
       <nav class="side-nav" aria-label="App navigation">
         <button class="side-link active" data-view="dashboard"><span>⌂</span> Dashboard</button>
@@ -364,7 +364,7 @@ form?.addEventListener('submit',e=>{
 function stripHtml(html){const tmp=document.createElement('div');tmp.innerHTML=html;return tmp.textContent.replace(/\s+/g,' ').trim()}
 
 function currentPlainText(){
-  const title=document.getElementById('resultTitle')?.textContent||'LessonBridge resource';
+  const title=document.getElementById('resultTitle')?.textContent||'AdaptEd resource';
   const meta=document.getElementById('resultMeta')?.textContent||'';
   const parts=[...document.querySelectorAll('#resultSections .result-section')].map(s=>`${s.querySelector('h3')?.textContent.toUpperCase()}\n${s.textContent.replace(s.querySelector('h3')?.textContent||'','').trim()}`);
   return `${title}\n${meta}\n\n${parts.join('\n\n')}\n\nTeacher review required: Check accuracy, suitability and safeguarding before classroom use.`;
@@ -374,7 +374,7 @@ document.getElementById('copyResult')?.addEventListener('click',async()=>{
   const btn=document.getElementById('copyResult');btn.textContent='Copied';setTimeout(()=>btn.textContent='Copy',1200);
 });
 document.getElementById('downloadResult')?.addEventListener('click',()=>{
-  const blob=new Blob([currentPlainText()],{type:'text/plain'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='lessonbridge-resource.txt';a.click();URL.revokeObjectURL(url);
+  const blob=new Blob([currentPlainText()],{type:'text/plain'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='adapted-resource.txt';a.click();URL.revokeObjectURL(url);
 });
 
 function renderRecent(){
